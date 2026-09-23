@@ -6,7 +6,7 @@ Every model follows the same pipeline: load raw images → resize/transform to t
 
 This README is updated with a new entry every time a CNN is trained on a new dataset — see [Results Summary](#-results-summary) for the running scoreboard and [Adding a New Dataset](#-adding-a-new-dataset) for the template to copy when you add one.
 
----
+--- 
 
 ## 📁 Repository Structure
 
