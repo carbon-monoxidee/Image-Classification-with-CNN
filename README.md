@@ -131,8 +131,8 @@ Input (3, 224, 224)
 
     | Split | Accuracy | Avg Loss |
     |---|---|---|
-    | Validation | ...% | ... |
-    | Test | ...% | ... |
+    | Validation | N/A | N/A |
+    | Test | N/A | N/A |
 
 
 ---
