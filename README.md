@@ -87,37 +87,53 @@ Input (3, 224, 224)
 
 ---
 
-## ➕ Adding a New Dataset
-
-When you train a CNN on a new dataset, do three things:
+## 2. Intel Image Classification Dataset
 
 1. **Add a row to [Results Summary](#-results-summary)**.
-2. **Add a new numbered section below**, copying this template:
+2. **Add a new numbered section below**
 
-    ## <emoji> N. <Dataset Name>
+    ## Intel Image Classification
 
-    **Dataset:** [<name>](<link>) — <size / class breakdown>.
+    **Dataset:** [Intel Image Classification Dataset](https://www.kaggle.com/datasets/puneet6060/intel-image-classification) — 25k images
+   
+    class breakdown :
+   
+    - buildings' -> 0
+    -'forest' -> 1
+    -'glacier' -> 2
+    -'mountain' -> 3
+    -'sea' -> 4
+    -'street' -> 5 
 
     **Pipeline**
-    1. ...
-    2. ...
+    1. Import necessary libraries
+    2. Read the dataset
+    3. Visualze one of the image using `PIL`
+    4. construct a `dataset class`
+    5. construct `DataLoader`
+    6. construct `class CNN`
+    7. traing loop
 
     **Architecture**
     ```
-    <input shape>
-      → ...
-      → output
+   Input (3, 150, 150)
+  → Conv2d(3, 16, k=3, p=1) → ReLU → MaxPool2d(2)   → (16, 75, 75)
+  → Conv2d(16, 32, k=3, p=1) → ReLU → MaxPool2d(2)  → (32, 37, 37)
+  → Flatten                                          → (32*37*37,)
+  → Linear(43808, 128) → ReLU
+  → Linear(128, 6)                                   → Output
     ```
 
-    **Training** — <loss fn> + <optimizer>(lr=<x>), <N> epochs.
+    **Training** — `CrossEntropyLoss()` + `Adam(lr=0.001)`, 20 epochs.
 
     **Results**
+
+    Training remains incomplete due to hardware limitations
 
     | Split | Accuracy | Avg Loss |
     |---|---|---|
     | Validation | ...% | ... |
     | Test | ...% | ... |
 
-    **Notes** — <overfitting/underfitting nature are known, ideas for improvement may be helpfull>.
 
 ---
