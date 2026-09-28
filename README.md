@@ -46,7 +46,7 @@ Notebooks are written for **Google Colab**, with datasets mounted from Google Dr
 |---|---|---|---|---|---|---|
 | 1 | [Cats and Dogs Mini Dataset](https://www.kaggle.com/datasets/aleemaparakatta/cats-and-dogs-mini-dataset) | Binary classification | 2 | 59.33% | 68.67% | `notebooks/cat_dog_classifier.ipynb` |
 
-> Add a new row here every time a new dataset is trained.
+| 2 | [Intel Image Classification Dataset](https://www.kaggle.com/datasets/puneet6060/intel-image-classification). | Cross Entrophy classification | 2 | N/A | N/A | `notebooks/Intel_Image_Classification_CNN_.ipynb` |
 
 ---
 
@@ -117,11 +117,11 @@ Input (3, 224, 224)
     **Architecture**
     ```
    Input (3, 150, 150)
-  → Conv2d(3, 16, k=3, p=1) → ReLU → MaxPool2d(2)   → (16, 75, 75)
-  → Conv2d(16, 32, k=3, p=1) → ReLU → MaxPool2d(2)  → (32, 37, 37)
-  → Flatten                                          → (32*37*37,)
-  → Linear(43808, 128) → ReLU
-  → Linear(128, 6)                                   → Output
+    → Conv2d(3, 16, k=3, p=1) → ReLU → MaxPool2d(2)   → (16, 75, 75)
+    → Conv2d(16, 32, k=3, p=1) → ReLU → MaxPool2d(2)  → (32, 37, 37)
+    → Flatten                                          → (32*37*37,)
+    → Linear(43808, 128) → ReLU
+    → Linear(128, 6)                                   → Output
     ```
 
     **Training** — `CrossEntropyLoss()` + `Adam(lr=0.001)`, 20 epochs.
