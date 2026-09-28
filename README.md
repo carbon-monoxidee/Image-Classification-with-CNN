@@ -45,7 +45,6 @@ Notebooks are written for **Google Colab**, with datasets mounted from Google Dr
 | # | Dataset | Task | Classes | Val Acc | Test Acc | Notebook |
 |---|---|---|---|---|---|---|
 | 1 | [Cats and Dogs Mini Dataset](https://www.kaggle.com/datasets/aleemaparakatta/cats-and-dogs-mini-dataset) | Binary classification | 2 | 59.33% | 68.67% | `notebooks/cat_dog_classifier.ipynb` |
-
 | 2 | [Intel Image Classification Dataset](https://www.kaggle.com/datasets/puneet6060/intel-image-classification). | Cross Entrophy classification | 2 | N/A | N/A | `notebooks/Intel_Image_Classification_CNN_.ipynb` |
 
 ---
